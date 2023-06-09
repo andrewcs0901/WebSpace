@@ -3,8 +3,12 @@ $(document).ready(function () {
     $.ajax({
         type: "GET",
         url: "https://api.nasa.gov/planetary/apod?api_key=RcqfeXacsqWFLGfYlwqJyyVjHY1Wo7cvdvfNqPEF",
+        timeout: 5000,
         success: function (response) {
             showPicOfDay(response);
+        },
+        error: function () {
+            showError();
         }
     });
 });
@@ -17,4 +21,8 @@ function showPicOfDay(data) {
     $("#picture img").attr("alt", data.title)
     $("#description").html(data.explanation);
 
+}
+
+function showError() {
+    $("#page").fadeIn(3000);
 }
