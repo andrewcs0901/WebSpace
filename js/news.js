@@ -21,9 +21,8 @@ function loadNews(data){
                                 <img class="responsive-img" src="${news[i].urlToImage}" alt="">
                             </div>
                             <div class="description">
-                                <p class="news-description">${news[i].description} 
-                                    <p style="float: right;">Read more...<p/>
-                                </p>
+                                <p class="news-description">${news[i].description}</p>
+                                <p style="float: right;">Read more...<p/>
                             </div>
                         </a>
                     </div>
